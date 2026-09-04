@@ -12,15 +12,16 @@
     :root{--bg:#0c0e14;--card:#171a24;--line:#2b3040;--text:#f7f7fa;--muted:#aeb4c3;--gold:#ffca43;--red:#ff5364;--green:#40d59b}
     *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% -10%,#2d2740 0,#11131a 40%,var(--bg) 75%);color:var(--text);font-family:Tahoma,Arial,sans-serif}
     button,input,select{font:inherit}.app{width:min(100%,520px);min-height:100vh;margin:auto;padding:22px 16px 40px}.brand{text-align:center;margin:8px 0 24px}.brand h1{font-size:3rem;margin:0;color:var(--gold);text-shadow:0 4px 24px #ffca4350}.brand p{margin:6px 0;color:var(--muted)}
-    .maker{font-weight:800;color:#fff;margin-top:5px}.install-app{position:fixed;z-index:20;left:14px;bottom:14px;width:auto;background:var(--gold);color:#17130a;box-shadow:0 8px 28px #000a;padding:11px 15px}.panel{background:#171a24e8;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 18px 50px #0007}.hidden{display:none!important}.row{display:flex;gap:10px;align-items:center}.row>*{flex:1}
+    .maker{font-weight:800;color:#fff;margin-top:5px}.how-btn{position:fixed;z-index:20;right:14px;top:14px;width:auto;background:#282d3c;color:#fff;padding:10px 13px}.install-app{position:fixed;z-index:20;left:14px;bottom:14px;width:auto;background:var(--gold);color:#17130a;box-shadow:0 8px 28px #000a;padding:11px 15px}.panel{background:#171a24e8;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 18px 50px #0007}.hidden{display:none!important}.row{display:flex;gap:10px;align-items:center}.row>*{flex:1}
     label{display:block;margin:12px 2px 7px;color:var(--muted);font-weight:bold}input,select{width:100%;border:1px solid var(--line);background:#0e1119;color:#fff;border-radius:14px;padding:14px;outline:none}input:focus,select:focus{border-color:var(--gold)}
     button{width:100%;border:0;border-radius:15px;padding:14px 16px;font-weight:800;cursor:pointer}.primary{background:var(--gold);color:#17130a;margin-top:16px}.secondary{background:#282d3c;color:#fff}.danger{background:#3a2028;color:#ffabb3}.small{width:auto;padding:10px 13px}
     .counter{display:grid;grid-template-columns:52px 1fr 52px;gap:9px;align-items:center}.counter strong{text-align:center;font-size:1.4rem}.names{display:grid;gap:9px;margin-top:13px}.name-row{display:flex;gap:8px}.name-row input{flex:1}.name-row button{width:46px;padding:0;background:#30212a;color:#ff9ba5}
     .note{font-size:.9rem;color:var(--muted);line-height:1.6;margin:12px 2px 0}.status{text-align:center;color:var(--muted);margin-bottom:15px}.handoff{text-align:center;padding:16px 3px}.handoff .player{font-size:2rem;color:var(--gold);margin:8px 0}.phone{font-size:3.2rem;margin:10px}.role{min-height:260px;display:flex;flex-direction:column;justify-content:center;text-align:center;border:2px dashed var(--line);border-radius:22px;padding:20px;background:#10131b}.role .icon{font-size:4rem}.role h2{font-size:2.1rem;margin:8px 0}.role.gammez{border-color:#ffca4380;background:#211b0e}.role.gammez h2{color:var(--gold)}.role.normal{border-color:#40d59b70}.role.normal h2{color:var(--green)}
-    .mates{background:#0d1017;border-radius:15px;padding:12px;margin-top:12px;color:#f4df9c}.warning{color:#ffadb4;font-weight:bold}.divider{height:1px;background:var(--line);margin:16px 0}.rules{line-height:1.8;color:#d8dbe3}.end{text-align:center}.end .icon{font-size:4rem}.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.wheel-wrap{position:relative;width:min(88vw,420px);margin:5px auto 15px}.wheel-wrap:before{content:'▼';position:absolute;z-index:2;top:-13px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--gold);filter:drop-shadow(0 3px 2px #000)}canvas{display:block;width:100%;height:auto}.result{min-height:74px;background:#0e1119;border:1px solid var(--line);border-radius:16px;padding:13px;margin:12px 0;color:var(--gold);font-size:1.12rem;font-weight:800;display:flex;align-items:center;justify-content:center}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e54858;color:#fff;border-radius:12px;padding:11px 17px;z-index:10;box-shadow:0 8px 30px #0008}
+    .mates{background:#0d1017;border-radius:15px;padding:12px;margin-top:12px;color:#f4df9c}.warning{color:#ffadb4;font-weight:bold}.divider{height:1px;background:var(--line);margin:16px 0}.rules{line-height:1.8;color:#d8dbe3}.end{text-align:center}.end .icon{font-size:4rem}.choice{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}.suspect-box{text-align:right}.suspect-result{font-size:1.15rem;line-height:1.9;background:#0e1119;border:1px solid var(--line);border-radius:18px;padding:16px;margin:15px 0}.all-gammez{color:var(--gold);font-weight:900}.score-title{margin:20px 0 8px}.scoreboard{display:grid;gap:8px}.score-line{display:flex;justify-content:space-between;gap:12px;background:#0e1119;border:1px solid var(--line);border-radius:13px;padding:11px 13px}.score-line strong:last-child{color:var(--gold)}.wheel-wrap{position:relative;width:min(88vw,420px);margin:5px auto 15px}.wheel-wrap:before{content:'▼';position:absolute;z-index:2;top:-13px;left:50%;transform:translateX(-50%);font-size:2rem;color:var(--gold);filter:drop-shadow(0 3px 2px #000)}canvas{display:block;width:100%;height:auto}.result{min-height:74px;background:#0e1119;border:1px solid var(--line);border-radius:16px;padding:13px;margin:12px 0;color:var(--gold);font-size:1.12rem;font-weight:800;display:flex;align-items:center;justify-content:center}.modal{position:fixed;inset:0;background:#05070ddd;z-index:30;display:grid;place-items:center;padding:16px}.modal-box{width:min(500px,100%);max-height:85vh;overflow:auto;background:#171a24;border:1px solid var(--line);border-radius:24px;padding:20px}.modal-box h2{color:var(--gold);margin-top:0}.modal-box p{line-height:1.9;color:#d8dbe3}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e54858;color:#fff;border-radius:12px;padding:11px 17px;z-index:40;box-shadow:0 8px 30px #0008}@media(max-width:420px){.choice{grid-template-columns:1fr}.how-btn{position:static;margin:12px 12px 0}}
   </style>
 </head>
 <body>
+<button id="howTo" class="how-btn">إزاي تلعب؟</button>
 <main class="app">
   <header class="brand"><h1>غمزة</h1><div class="maker">صُنع شعراوي</div><p>خلي عينك مفتّحة… ومتتكشفش!</p></header>
 
@@ -50,7 +51,22 @@
 
   <section id="ready" class="panel hidden end">
     <div class="icon">😉</div><h2>كل الأدوار اتوزعت</h2><p class="rules">حطوا الموبايل بعيد وابدأوا الغمز.<br>بعد انتهاء الجولة اختاروا هل الخاسر عليه حكم أم لا.</p>
-    <div class="choice"><button id="openWheel" class="primary">🎡 الأحكام</button><button id="skipRules" class="secondary">مش لازم</button></div>
+    <div class="choice"><button id="openSuspect" class="primary">🔍 شك</button><button id="noSuspect" class="primary">🏆 محدش شك</button><button id="openWheel" class="secondary">🎡 الأحكام</button><button id="skipRules" class="secondary">مش لازم</button></div>
+  </section>
+
+  <section id="suspect" class="panel hidden end">
+    <div class="icon">🔍</div><h2>مين عاوز يشك؟</h2>
+    <div class="suspect-box"><label for="accuser">اختار اسم اللي بيشك</label><select id="accuser"></select><label for="accused">شاكك في مين؟</label><select id="accused"></select></div>
+    <button id="confirmSuspect" class="primary">تم — اظهر النتيجة</button>
+    <button id="cancelSuspect" class="secondary" style="margin-top:10px">رجوع</button>
+  </section>
+
+  <section id="suspectResult" class="panel hidden end">
+    <div class="icon" id="suspectIcon">🔍</div><h2 id="suspectTitle"></h2>
+    <div class="suspect-result" id="suspectText"></div>
+    <div class="all-gammez" id="allGammez"></div>
+    <h3 class="score-title">السكور</h3><div class="scoreboard" id="scoreboard"></div>
+    <div class="choice"><button id="resultWheel" class="primary">🎡 الأحكام</button><button id="resultNewRound" class="secondary">جولة جديدة</button></div>
   </section>
 
   <section id="wheel" class="panel hidden end">
@@ -61,11 +77,12 @@
     <button id="afterWheel" class="secondary" style="margin-top:10px">جولة جديدة</button>
   </section>
 </main>
+<div id="howModal" class="modal hidden"><div class="modal-box"><h2>إزاي تلعب غمزة؟</h2><p>كل لاعب يشوف دوره لوحده. الغامز يحاول يغمز للاعبين من غير ما يتكشف، واللاعبون يراقبوا بعض. لو لاعب شاف الغامز وهو بيغمز، يختار «شك» ثم يختار اسمه واسم الشخص اللي شاكك فيه. لو شكه صح، يأخذ 100 نقطة والغـامز عليه الحكم؛ ولو غلط، يأخذ 0 واللي شك عليه الحكم. لو الجولة خلصت ومحدش شك، كل غامز يأخذ 100 نقطة. بعد النتيجة يظهر ترتيب السكور وتقدروا تبدأوا جولة جديدة.</p><button id="closeHow" class="primary">فهمت</button></div></div>
 <button id="installApp" class="install-app hidden">⬇ تثبيت غمزة</button>
 <script>
   const $=s=>document.querySelector(s);
-  const state={players:[],roles:[],index:0,count:4};
-  const views=['setup','pass','revealPanel','ready','wheel'];
+  const state={players:[],roles:[],index:0,count:4,scores:{}};
+  const views=['setup','pass','revealPanel','ready','suspect','suspectResult','wheel'];
   const baseRules=['اعمل 10 ضغط','غنّي أغنية من اختيارك','اعمل رقصة مضحكة لمدة 15 ثانية','قف على رجل واحدة لمدة 15 ثانية','اعمل وش مضحك واتصوّر','ممنوع تقول كلمة «لا» جولة كاملة','اعمل إعلان مضحك لأي حاجة قدامك','احكي موقف محرج بسيط','قول ميزة حلوة في كل لاعب','غمّض عينك وحاول تعرف مين بيتكلم','حط ضهر إيدك على الترابيزة 5 ثواني'];
   const wheelRules=baseRules.flatMap(x=>[x,x]);
   let wheelAngle=0,spinning=false;
@@ -83,11 +100,11 @@
     for(let i=0;i<state.count;i++){const input=document.createElement('input');input.placeholder=`اسم اللاعب ${i+1}`;input.value=current[i]||'';input.maxLength=20;box.appendChild(input)}
   }
   function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-  function begin(){
+  function begin(resetScores=false){
     const inputs=[...$('#names').querySelectorAll('input')];
     const names=inputs.map((x,i)=>x.value.trim()||`لاعب ${i+1}`);
     if(new Set(names.map(n=>n.toLowerCase())).size!==names.length){toast('لازم كل اسم يكون مختلف');return}
-    state.players=names;const g=Number($('#gammezCount').value);
+    state.players=names;if(resetScores)state.scores={};names.forEach(n=>state.scores[n]??=0);const g=Number($('#gammezCount').value);
     const chosen=new Set(shuffle([...Array(state.count).keys()]).slice(0,g));
     const gammezNames=names.filter((_,i)=>chosen.has(i));
     state.roles=names.map((name,i)=>({name,isGammez:chosen.has(i),mates:gammezNames.filter(n=>n!==name)}));state.index=0;preparePass();
@@ -96,13 +113,35 @@
   function reveal(){const r=state.roles[state.index];const card=$('#roleCard');card.className='role '+(r.isGammez?'gammez':'normal');
     card.innerHTML=r.isGammez?`<div class="icon">😉</div><h2>إنت غامز</h2><p>غمّز للاعبين من غير ما تتكشف.</p>${r.mates.length?`<div class="mates">الغامزين معاك: <strong>${escapeHtml(r.mates.join('، '))}</strong></div>`:'<div class="mates">إنت الغامز الوحيد</div>'}`:`<div class="icon">👀</div><h2>إنت لاعب عادي</h2><p>راقب كويس وحاول تعرف مين الغامز.</p>`;show('revealPanel')}
   function hideRole(){state.index++;state.index<state.roles.length?preparePass():show('ready')}
+  function fillSuspectLists(){
+    const accuser=$('#accuser'),accused=$('#accused');accuser.innerHTML='';accused.innerHTML='';
+    state.players.forEach(name=>{const a=document.createElement('option');a.value=name;a.textContent=name;accuser.appendChild(a);const b=a.cloneNode(true);accused.appendChild(b)});
+    updateAccused();
+  }
+  function updateAccused(){const who=$('#accuser').value;[...$('#accused').options].forEach(o=>o.hidden=o.value===who);if($('#accused').value===who){const first=[...$('#accused').options].find(o=>!o.hidden);if(first)$('#accused').value=first.value}}
+  function checkSuspect(){
+    const accuser=$('#accuser').value,accused=$('#accused').value;
+    if(!accuser||!accused||accuser===accused){toast('اختار شخصين مختلفين');return}
+    const role=state.roles.find(r=>r.name===accused),correct=role&&role.isGammez;
+    $('#suspectIcon').textContent=correct?'✅':'❌';$('#suspectTitle').textContent=correct?'الشك صح!':'الشك غلط!';
+    const names=state.roles.filter(r=>r.isGammez).map(r=>r.name);
+    if(correct)state.scores[accuser]+=100;else names.forEach(n=>state.scores[n]+=100);
+    $('#suspectText').innerHTML=correct?`<strong>${escapeHtml(accused)}</strong> طلع غامز، وهو اللي عليه الحكم.<br><strong>${escapeHtml(accuser)}</strong> كسب 100 نقطة.`:`<strong>${escapeHtml(accuser)}</strong> شك غلط، وهو اللي عليه الحكم وأخذ 0 نقطة.<br>كل غامز كسب <strong>100 نقطة</strong>.`;
+    $('#allGammez').textContent='الغامز'+(names.length>1?'ين':'')+': '+names.join('، ');show('suspectResult');
+    renderScoreboard();
+  }
+  function noSuspect(){const names=state.roles.filter(r=>r.isGammez).map(r=>r.name);names.forEach(n=>state.scores[n]+=100);$('#suspectIcon').textContent='🏆';$('#suspectTitle').textContent='الغامز كسب!';$('#suspectText').innerHTML='محدش شك في الغامز، وكل غامز كسب <strong>100 نقطة</strong>.';$('#allGammez').textContent='الغامز'+(names.length>1?'ين':'')+': '+names.join('، ');renderScoreboard();show('suspectResult')}
+  function renderScoreboard(){const board=$('#scoreboard');board.innerHTML='';Object.entries(state.scores).sort((a,b)=>b[1]-a[1]).forEach(([name,score],i)=>{const row=document.createElement('div');row.className='score-line';row.innerHTML=`<strong>${i+1}. ${escapeHtml(name)}</strong><strong>${score} نقطة</strong>`;board.appendChild(row)})}
   function newRound(){const names=[...state.players];state.count=names.length;show('setup');renderSetup();[...$('#names input')].forEach((x,i)=>x.value=names[i]);begin()}
   function drawWheel(){const c=$('#wheelCanvas'),ctx=c.getContext('2d'),cx=c.width/2,cy=c.height/2,r=c.width/2-14,step=Math.PI*2/wheelRules.length;ctx.clearRect(0,0,c.width,c.height);ctx.save();ctx.translate(cx,cy);ctx.rotate(wheelAngle);for(let i=0;i<wheelRules.length;i++){ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,r,i*step,(i+1)*step);ctx.closePath();ctx.fillStyle=i%2?'#ffca43':'#4b3d79';ctx.fill();ctx.strokeStyle='#11131a';ctx.lineWidth=3;ctx.stroke();ctx.save();ctx.rotate((i+.5)*step);ctx.textAlign='right';ctx.fillStyle=i%2?'#17130a':'#fff';ctx.font='bold 20px Tahoma';const txt=wheelRules[i].length>25?wheelRules[i].slice(0,23)+'…':wheelRules[i];ctx.fillText(txt,r-22,7);ctx.restore()}ctx.restore();ctx.beginPath();ctx.arc(cx,cy,58,0,Math.PI*2);ctx.fillStyle='#11131a';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=6;ctx.stroke();ctx.fillStyle='#ffca43';ctx.font='bold 25px Tahoma';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('غمزة',cx,cy)}
   function spinWheel(){if(spinning)return;spinning=true;$('#spin').disabled=true;$('#wheelResult').textContent='العجلة بتلف…';const start=wheelAngle,extra=Math.PI*2*(5+Math.random()*4),duration=4300,t0=performance.now();function frame(t){const p=Math.min(1,(t-t0)/duration),ease=1-Math.pow(1-p,4);wheelAngle=start+extra*ease;drawWheel();if(p<1)requestAnimationFrame(frame);else{const step=Math.PI*2/wheelRules.length;const normalized=(((-Math.PI/2-wheelAngle)%(Math.PI*2))+Math.PI*2)%(Math.PI*2);const idx=Math.floor(normalized/step)%wheelRules.length;$('#wheelResult').textContent='الحكم: '+wheelRules[idx];spinning=false;$('#spin').disabled=false}}requestAnimationFrame(frame)}
   function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
   function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
   $('#minus').onclick=()=>{if(state.count>2){state.count--;renderSetup()}};$('#plus').onclick=()=>{if(state.count<30){state.count++;renderSetup()}};
-  $('#start').onclick=begin;$('#reveal').onclick=reveal;$('#hideRole').onclick=hideRole;$('#openWheel').onclick=()=>{show('wheel');drawWheel()};$('#skipRules').onclick=newRound;$('#spin').onclick=spinWheel;$('#afterWheel').onclick=newRound;renderSetup();
+  $('#start').onclick=()=>begin(true);$('#reveal').onclick=reveal;$('#hideRole').onclick=hideRole;
+  $('#openSuspect').onclick=()=>{fillSuspectLists();show('suspect')};$('#noSuspect').onclick=noSuspect;$('#accuser').onchange=updateAccused;$('#confirmSuspect').onclick=checkSuspect;$('#cancelSuspect').onclick=()=>show('ready');
+  $('#openWheel').onclick=$('#resultWheel').onclick=()=>{show('wheel');drawWheel()};$('#resultNewRound').onclick=$('#skipRules').onclick=newRound;$('#spin').onclick=spinWheel;$('#afterWheel').onclick=newRound;
+  $('#howTo').onclick=()=>$('#howModal').classList.remove('hidden');$('#closeHow').onclick=()=>$('#howModal').classList.add('hidden');$('#howModal').onclick=e=>{if(e.target===$('#howModal'))$('#howModal').classList.add('hidden')};renderSetup();
   let installPrompt=null;const installBtn=$('#installApp');
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBtn.classList.remove('hidden')});
   installBtn.onclick=async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBtn.classList.add('hidden')}else{toast('من قائمة المتصفح اختار: تثبيت التطبيق أو إضافة إلى الشاشة الرئيسية')}};

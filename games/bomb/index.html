@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#120b14">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <title>القنبلة | صنع شعراوي</title>
+  <style>
+    :root{--bg:#09070d;--card:#17111d;--line:#37283f;--ink:#fff8ec;--muted:#bdb2c4;--red:#ff4057;--orange:#ff9f1c;--green:#43d39e}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0,#451329 0,#160b16 36%,var(--bg) 72%);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;padding:14px}button,input,select{font:inherit}.app{width:min(540px,100%);margin:auto}.top{display:flex;justify-content:flex-start}.how{width:auto;border:1px solid var(--line);background:#211727;color:#fff;padding:10px 14px;border-radius:14px}.install-app{position:fixed;z-index:20;left:14px;bottom:14px;width:auto;border:0;border-radius:14px;background:var(--orange);color:#17090c;font-weight:900;padding:11px 15px;box-shadow:0 8px 28px #000a}.hidden{display:none!important}.brand{text-align:center;margin:4px 0 18px}.maker{color:var(--orange);font-weight:900;letter-spacing:3px}.brand h1{font-size:clamp(2.6rem,12vw,4.5rem);margin:4px 0;text-shadow:0 0 28px #ff405766}.brand p{color:var(--muted);margin:0}.panel{background:linear-gradient(145deg,#1e1524ef,#110d16f5);border:1px solid var(--line);border-radius:27px;padding:20px;box-shadow:0 22px 60px #0008}.screen{display:none}.screen.active{display:block}.lead{text-align:center;color:var(--muted);line-height:1.8}.counter{display:grid;grid-template-columns:55px 1fr 55px;gap:10px;align-items:center;margin:18px 0}.counter button{height:55px;border:0;border-radius:17px;background:#30223a;color:#fff;font-size:1.55rem}.number{text-align:center;font-size:1.5rem;font-weight:900}.names{display:grid;gap:9px}.names input,select{width:100%;background:#0d0910;color:#fff;border:1px solid var(--line);border-radius:14px;padding:13px;outline:none}.names input:focus,select:focus{border-color:var(--orange)}label{display:block;color:var(--muted);font-weight:800;margin:16px 2px 8px}.primary,.secondary{width:100%;border:0;border-radius:16px;padding:15px;font-weight:900;margin-top:14px}.primary{background:linear-gradient(135deg,var(--orange),var(--red));color:#17090c}.secondary{background:#30223a;color:#fff}.player{text-align:center;color:var(--orange);font-size:1.55rem;font-weight:900}.bomb{font-size:6rem;text-align:center;margin:6px 0;filter:drop-shadow(0 0 24px #ff405788);animation:pulse .75s infinite alternate}.bomb.danger{animation:shake .12s infinite}.challenge{min-height:150px;display:grid;place-items:center;text-align:center;background:#0d0910;border:1px dashed #65415d;border-radius:20px;margin:12px 0;padding:20px}.challenge h2{font-size:1.55rem;line-height:1.6;margin:0}.pass{font-size:1.15rem}.hint{text-align:center;color:var(--muted);font-size:.9rem}.boom{text-align:center}.boom .bomb{font-size:7rem;animation:none}.boom h2{color:var(--red);font-size:2rem;margin:5px}.loser{font-size:1.7rem;color:var(--orange);font-weight:900;margin:12px}.scoreboard{display:grid;gap:8px;margin-top:14px}.score{display:flex;justify-content:space-between;background:#0d0910;border:1px solid var(--line);padding:11px 13px;border-radius:13px}.score b:last-child{color:var(--orange)}.modal{position:fixed;inset:0;background:#050307e8;display:none;place-items:center;padding:16px;z-index:10}.modal.open{display:grid}.modal-box{width:min(510px,100%);background:#1a121f;border:1px solid var(--line);border-radius:24px;padding:21px}.modal h2{color:var(--orange);margin-top:0}.modal p{line-height:1.9;color:#e2d9e6}.foot{text-align:center;color:#746b7b;font-size:.82rem;padding:15px}.toast{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:#30223a;color:#fff;padding:11px 16px;border-radius:12px;z-index:30}@keyframes pulse{to{transform:scale(1.09)}}@keyframes shake{0%{transform:translateX(-3px) rotate(-2deg)}100%{transform:translateX(3px) rotate(2deg)}}@media(max-width:400px){.panel{padding:16px}.brand h1{font-size:2.8rem}.bomb{font-size:5rem}}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div class="top"><button class="how" id="howBtn">إزاي تلعب؟</button></div>
+    <header class="brand"><div class="maker">صنع شعراوي</div><h1>القنبلة</h1><p>جاوب بسرعة ومرّر الموبايل!</p></header>
+    <section class="panel">
+      <div class="screen active" id="setup">
+        <p class="lead">اكتب أسماء اللاعبين. القنبلة هتنفجر في وقت عشوائي محدش يعرفه.</p>
+        <div class="counter"><button id="plus">+</button><div class="number"><span id="count">3</span> لاعبين</div><button id="minus">−</button></div>
+        <div class="names" id="names"></div>
+        <label for="roundTime">وقت الجولة</label>
+        <select id="roundTime">
+          <option value="30">30 ثانية</option><option value="60">دقيقة</option><option value="90" selected>دقيقة ونصف</option><option value="120">دقيقتان</option><option value="150">دقيقتان ونصف</option><option value="180">3 دقائق</option><option value="210">3 دقائق ونصف</option><option value="240">4 دقائق</option><option value="270">4 دقائق ونصف</option><option value="300">5 دقائق</option>
+        </select>
+        <button class="primary" id="start">ابدأ الجولة</button>
+      </div>
+      <div class="screen" id="ready">
+        <div class="player" id="starter"></div><div class="bomb">💣</div>
+        <p class="lead">أول لاعب يضغط تشغيل، يجاوب على التحدي، وبعدها يمرّر الموبايل.</p>
+        <button class="primary" id="ignite">شغّل القنبلة</button>
+      </div>
+      <div class="screen" id="play">
+        <div class="player" id="current"></div><div class="bomb" id="bomb">💣</div>
+        <div class="challenge"><h2 id="challenge"></h2></div>
+        <button class="primary pass" id="pass">جاوبت — مرّر للي بعدك</button>
+        <p class="hint">الوقت مخفي… متتأخرش!</p>
+      </div>
+      <div class="screen boom" id="result">
+        <div class="bomb">💥</div><h2>بوووم!</h2><div class="loser" id="loser"></div>
+        <p class="lead">القنبلة وقفت عنده فأخذ 0، وكل لاعب تاني أخذ 100 نقطة.</p>
+        <h3>النتيجة</h3><div class="scoreboard" id="scores"></div>
+        <button class="primary" id="again">جولة جديدة</button><button class="secondary" id="restart">تغيير اللاعبين</button>
+      </div>
+    </section>
+    <div class="foot">صنع شعراوي</div>
+  </main>
+  <div class="modal" id="modal"><div class="modal-box"><h2>إزاي تلعب؟</h2><p>اختار وقت الجولة من 30 ثانية إلى 5 دقائق. كل لاعب يجاوب على التحدي بسرعة، وبعدها يضغط «جاوبت» ويمرّر الموبايل للاعب اللي بعده. اللاعب اللي القنبلة تقف عنده يأخذ 0، وكل باقي اللاعبين يأخذوا 100 نقطة. صاحب أعلى سكور هو الفائز.</p><button class="primary" id="close">فهمت، يلا نلعب</button></div></div>
+  <button id="installApp" class="install-app hidden">⬇ تثبيت القنبلة</button>
+  <script>
+    const challenges=['قول اسم 3 بلاد','قول 4 أكلات تبدأ بحرف الميم','عدّ من 10 إلى 1 بسرعة','قول أسماء 3 لاعبين كرة','اذكر 4 ألوان','قول 3 حيوانات','اذكر 3 أفلام أو مسلسلات','قول 4 أسماء ولاد','قول 4 أسماء بنات','اذكر 3 حاجات موجودة في المدرسة','قول 3 فواكه','اذكر 4 مهن','قول 3 ألعاب موبايل','اذكر 3 مدن مصرية','قول 4 حاجات لونها أبيض','قلّد صوت حيوان والباقي يخمّن','قول كلمة تبدأ بآخر حرف من اسمك','اذكر 3 مشروبات','قول 3 حاجات بنستخدمها يوميًا','اذكر 4 رياضات','قول 3 كلمات تبدأ بحرف السين','اذكر 3 وسائل مواصلات','قول 4 حاجات موجودة في البيت','اذكر 3 شخصيات كرتونية','قول 4 حاجات لونها أحمر','اذكر 3 أجهزة كهربائية','قول 3 كلمات تنتهي بحرف النون','اذكر 4 مواد دراسية','قول 3 أكلات مصرية','اذكر 3 تطبيقات موبايل','قول 4 حاجات بتلبسها','اذكر 3 أماكن ممكن تسافر لها','قول 3 حاجات موجودة في المطبخ','اذكر 4 أدوات مكتبية','قول 3 أسماء تبدأ بحرف الألف','اذكر 3 فرق كرة قدم','قول 4 حاجات بتعمل صوت','اذكر 3 أنواع حلويات','قول 3 كلمات تبدأ بحرف الباء','اذكر 4 حاجات بنشوفها في الشارع','قول 3 حاجات مستديرة','اذكر 3 حيوانات بتطير','قول 4 أكلات ممكن تتعمل في البيت','اذكر 3 حاجات بنستخدمها في الشتاء','قول 3 أسماء مدن عربية','اذكر 4 حاجات موجودة في السوبر ماركت','قول 3 كلمات من 4 حروف','اذكر 3 حاجات بتتحرك بسرعة','قول 4 حاجات بتستخدم الكهرباء','اذكر 3 أدوات في المطبخ','قول 3 حاجات ممكن تاخدها في رحلة','اذكر 4 حاجات لونها أخضر','قول 3 أسماء تبدأ بحرف الميم','اذكر 3 حاجات بتفتح وتتقفل','قول 4 حاجات موجودة في الفصل','اذكر 3 حيوانات تعيش في البحر','قول 3 حاجات بنعملها الصبح','اذكر 4 حاجات ممكن تكون باردة','قول 3 كلمات تبدأ بحرف الكاف','اذكر 3 حاجات لها عجلات','قول 4 حاجات ممكن تشتريها من مكتبة','اذكر 3 أصوات بنسمعها يوميًا','قول 3 حاجات موجودة في الحمام','اذكر 4 حاجات صغيرة الحجم','قول 3 أسماء فواكه تبدأ بحرف التاء أو الميم'];
+    const $=id=>document.getElementById(id),screens=['setup','ready','play','result'];let players=[],scores={},turn=0,timer=null,challengeDeck=[],running=false,roundSeconds=90;
+    function go(id){screens.forEach(s=>$(s).classList.toggle('active',s===id));scrollTo(0,0)}
+    function renderNames(){const n=+$('count').textContent,old=[...$('names').querySelectorAll('input')].map(x=>x.value);$('names').innerHTML='';for(let i=0;i<n;i++){const input=document.createElement('input');input.placeholder=`اسم اللاعب ${i+1}`;input.value=old[i]||'';input.maxLength=20;$('names').appendChild(input)}}
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    function randomChallenge(){if(!challengeDeck.length)challengeDeck=shuffle([...challenges]);return challengeDeck.pop()}
+    function prepareRound(){turn=Math.floor(Math.random()*players.length);$('starter').textContent=`البداية مع: ${players[turn]}`;go('ready')}
+    function showTurn(){$('current').textContent=`الدور على: ${players[turn]}`;$('challenge').textContent=randomChallenge()}
+    function ignite(){running=true;$('bomb').classList.remove('danger');showTurn();go('play');const duration=roundSeconds*1000;timer=setTimeout(explode,duration);setTimeout(()=>{if(running)$('bomb').classList.add('danger')},Math.max(1000,duration-9000))}
+    function explode(){running=false;clearTimeout(timer);if(navigator.vibrate)navigator.vibrate([250,100,350]);players.forEach((p,i)=>{if(i!==turn)scores[p]+=100});$('loser').textContent=players[turn];renderScores();go('result')}
+    function renderScores(){const box=$('scores');box.innerHTML='';Object.entries(scores).sort((a,b)=>b[1]-a[1]).forEach(([name,n],i)=>{const row=document.createElement('div');row.className='score';row.innerHTML=`<b>${i+1}. ${escapeHtml(name)}</b><b>${n} نقطة</b>`;box.appendChild(row)})}
+    function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+    function toast(msg){const el=document.createElement('div');el.className='toast';el.textContent=msg;document.body.appendChild(el);setTimeout(()=>el.remove(),2600)}
+    $('plus').onclick=()=>{let n=+$('count').textContent;if(n<20)$('count').textContent=++n;renderNames()};$('minus').onclick=()=>{let n=+$('count').textContent;if(n>2)$('count').textContent=--n;renderNames()};
+    $('start').onclick=()=>{players=[...$('names').querySelectorAll('input')].map((x,i)=>x.value.trim()||`لاعب ${i+1}`);if(new Set(players.map(x=>x.toLowerCase())).size!==players.length){alert('لازم كل اسم يكون مختلف');return}roundSeconds=Number($('roundTime').value);scores={};challengeDeck=[];players.forEach(p=>scores[p]=0);prepareRound()};
+    $('ignite').onclick=ignite;$('pass').onclick=()=>{if(!running)return;turn=(turn+1)%players.length;showTurn()};$('again').onclick=prepareRound;$('restart').onclick=()=>{clearTimeout(timer);running=false;go('setup')};
+    $('howBtn').onclick=()=>$('modal').classList.add('open');$('close').onclick=()=>$('modal').classList.remove('open');$('modal').onclick=e=>{if(e.target===$('modal'))$('modal').classList.remove('open')};
+    let installPrompt=null;const installBtn=$('installApp');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBtn.classList.remove('hidden')});installBtn.onclick=async()=>{if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBtn.classList.add('hidden')}else toast('من قائمة المتصفح اختار: تثبيت التطبيق أو إضافة إلى الشاشة الرئيسية')};window.addEventListener('appinstalled',()=>installBtn.classList.add('hidden'));if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');if(new URLSearchParams(location.search).has('install'))setTimeout(()=>installBtn.classList.remove('hidden'),500);renderNames();
+  </script>
+</body>
+</html>
