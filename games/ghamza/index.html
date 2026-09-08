@@ -149,5 +149,18 @@
   if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
   if(new URLSearchParams(location.search).has('install'))setTimeout(()=>{installBtn.classList.remove('hidden')},500);
 </script>
+<script>
+if(new URLSearchParams(location.search).has('install')){
+  const installScreen=document.createElement('div');
+  installScreen.style.cssText='position:fixed;inset:0;z-index:999999;background:linear-gradient(145deg,#100b20,#25104d);display:grid;place-items:center;padding:22px;text-align:center;color:#fff;font-family:Tahoma,Arial';
+  installScreen.innerHTML='<div style="width:min(390px,100%);background:#171126;border:1px solid #493777;border-radius:26px;padding:28px;box-shadow:0 24px 70px #0008"><img src="icon-192.png" alt="غمزة" style="width:118px;height:118px;border-radius:25px"><h1 style="margin:18px 0 8px">تحميل غمزة</h1><p style="color:#c9bddc;line-height:1.8">اضغط الزر لتثبيت اللعبة على جهازك.</p><button id="quickInstall" style="width:100%;border:0;border-radius:14px;padding:15px;background:linear-gradient(135deg,#28d9ff,#446cff);color:white;font:900 17px Tahoma;cursor:pointer">📥 تثبيت اللعبة الآن</button><a href="../../" style="display:block;margin-top:16px;color:#b9accf;text-decoration:none">الرجوع للمتجر</a></div>';
+  document.body.appendChild(installScreen);
+  document.getElementById('quickInstall').onclick=()=>{
+    const b=document.getElementById('installApp');
+    if(b)b.click();
+    if(/iPhone|iPad|iPod/.test(navigator.userAgent))alert('من زر المشاركة في Safari اختار: إضافة إلى الشاشة الرئيسية');
+  };
+}
+</script>
 </body>
 </html>
